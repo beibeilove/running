@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑酷</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/hitPix.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/index.js"></script>
+    <script src="备份/game.js"></script>
+</head>
+<body>
+<canvas></canvas>
+<div class="start text-center">
+    <div class="welcome">城市跑酷</div>
+    <button class="btn btn-success">开始游戏</button>
+</div>
+<div class="start text-center" hidden>
+    <div class="welcome">城市跑酷</div>
+    <button class="btn btn-success">继续游戏</button>
+</div>
+<div class="fs">分数：<span>0</span></div>
+<div class="gk">关卡：<span>1</span></div>
+<div class="sm">生命值：<span>3</span></div>
+<div class="mask"></div>
+
+<!--声音-->
+<audio src="audio/bg.mp3" class="bgA" loop></audio>
+<audio src="audio/run.mp3" class="runA" loop></audio>
+<audio src="audio/gun.mp3" class="jumpA"></audio>
+<audio src="audio/hit.mp3" class="hitA"></audio>
+<audio src="audio/sui.mp3" class="suiA"></audio>
+<audio src="audio/die.ogg" class="dieA"></audio>
+<!--跑-->
+<img src="img/1.png" alt="" class="run" hidden>
+<img src="img/2.png" alt="" class="run" hidden>
+<img src="img/3.png" alt="" class="run" hidden>
+<img src="img/4.png" alt="" class="run" hidden>
+<img src="img/5.png" alt="" class="run" hidden>
+<img src="img/6.png" alt="" class="run" hidden>
+<img src="img/7.png" alt="" class="run" hidden>
+<img src="img/8.png" alt="" class="run" hidden>
+<!--跳-->
+<img src="img/jump.png" alt="" class="jump" hidden>
+<!--障碍物-->
+<img src="img/h1 (1).png" alt="" class="hinder" hidden>
+<img src="img/h1 (2).png" alt="" class="hinder" hidden>
+<img src="img/h1 (3).png" alt="" class="hinder" hidden>
+<img src="img/h1 (4).png" alt="" class="hinder" hidden>
+<img src="img/h1 (5).png" alt="" class="hinder" hidden>
+<img src="img/h1 (6).png" alt="" class="hinder" hidden>
+<img src="img/h1 (7).png" alt="" class="hinder" hidden>
+<img src="img/h1 (8).png" alt="" class="hinder" hidden>
+</body>
+</html>
