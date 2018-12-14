@@ -262,25 +262,27 @@ game.prototype={
                         that.hinderArr[i].flag3=false;
                     }
                 }
-                if(hitPix(that.canvas,that.cobj,that.zidanArr[that.zidanNum],that.hinderArr[i])){
-                    that.hinderArr[i].width=0;
-                    that.zidanArr[that.zidanNum].width=0;
-                
-                    if(!that.hinderArr[i].flag){
-                        xue1(that.cobj,that.hinderArr[i].x+that.hinderArr[i].width/2,that.person.y+that.person.height/2);
-                        document.querySelectorAll("span")[2].innerHTML = that.person.life;
-                    }
-                    if(that.hinderArr[i].flag2){
-                        xue1(that.cobj,that.hinderArr[i].x+that.hinderArr[i].width/2,that.person.y+that.person.height/2);
-                        that.person.life++;
-                        document.querySelectorAll("span")[2].innerHTML=that.person.life;
-                        that.hinderArr[i].flag2=false;
-                    }
-                    if(that.hinderArr[i].flag3){
-                        xue1(that.cobj,that.hinderArr[i].x+that.hinderArr[i].width/2,that.person.y+that.person.height/2);
-                        that.r=150;
-                        that.speeda=3;
-                        that.hinderArr[i].flag3=false;
+                if (that.zidanArr.length>0) {
+                    if (hitPix(that.canvas, that.cobj, that.zidanArr[that.zidanNum], that.hinderArr[i])) {
+                        that.hinderArr[i].width = 0;
+                        that.zidanArr[that.zidanNum].width = 0;
+
+                        if (!that.hinderArr[i].flag) {
+                            xue1(that.cobj, that.hinderArr[i].x + that.hinderArr[i].width / 2, that.person.y + that.person.height / 2);
+                            document.querySelectorAll("span")[2].innerHTML = that.person.life;
+                        }
+                        if (that.hinderArr[i].flag2) {
+                            xue1(that.cobj, that.hinderArr[i].x + that.hinderArr[i].width / 2, that.person.y + that.person.height / 2);
+                            that.person.life++;
+                            document.querySelectorAll("span")[2].innerHTML = that.person.life;
+                            that.hinderArr[i].flag2 = false;
+                        }
+                        if (that.hinderArr[i].flag3) {
+                            xue1(that.cobj, that.hinderArr[i].x + that.hinderArr[i].width / 2, that.person.y + that.person.height / 2);
+                            that.r = 150;
+                            that.speeda = 3;
+                            that.hinderArr[i].flag3 = false;
+                        }
                     }
                 }
 
@@ -311,7 +313,7 @@ game.prototype={
             /*操作背景*/
             that.backx-=that.backSpeed;
             that.canvas.style.backgroundPositionX = that.backx+"px";
-        },50)
+        },25)
     },
     key:function(){
         var that = this;
